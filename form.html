@@ -1,0 +1,129 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css?v=1719980439">
+    <link rel="stylesheet" type="text/css" href="./css/colorbox.css">
+    <link rel="stylesheet" type="text/css" href="./css/splide.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/bvi.min.css">
+</head>
+<div class="form-container">
+    <form action="#" method="post" id="appointmentForm">
+        <label for="fio">ФИО</label>
+        <input type="text" id="fio" name="fio">
+
+        <label for="phone">Номер телефона*</label>
+        <input type="tel" id="phone" name="phone" >
+
+        <label for="pin">Введите ПИН-код*</label>
+        <input type="password" id="pin" name="pin">
+
+        <label for="captcha">Введите текст с картинки</label>
+        <div class="captcha-container">
+            <img src="captcha.jpg" alt="Captcha">
+            <input type="text" id="captcha" name="captcha">
+        </div>
+
+        <div class="select-wrapper">
+            <label for="service-group">Выберите группу услуг</label>
+            <select id="service-group" name="service-group">
+                <option value="gazifikatsiya">Газификация</option>
+            </select>
+            <i class="select-arrow"></i>
+        </div>
+
+        <div class="select-wrapper">
+            <label for="service">Выберите услугу</label>
+            <select id="service" name="service">
+                <option value="gazifikatsiya">Газификация</option>
+            </select>
+            <i class="select-arrow"></i>
+        </div>
+
+        <div class="select-wrapper">
+            <label for="location">Выберите местонахождение офиса</label>
+            <select id="location" name="location">
+                <option value="omsk">г. Омск</option>
+            </select>
+            <i class="select-arrow"></i>
+        </div>
+
+        <div class="select-wrapper">
+            <label for="date">Выберите дату приема</label>
+            <select id="date" name="date">
+                <option value="14/03/2024">14 марта, 2024 года</option>
+            </select>
+            <i class="select-arrow"></i>
+        </div>
+
+        <div class="select-wrapper">
+            <label for="time">Выберите время приема</label>
+            <select id="time" name="time">
+                <option value="12:00">12:00</option>
+            </select>
+            <i class="select-arrow"></i>
+        </div>
+        
+
+        <button type="submit" class="form-button">Записаться за прием</button>
+    </form>
+</div>
+
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+    var phoneInput = document.getElementById('phone')
+
+    phoneInput.addEventListener('input', function() {
+        formatInputNumber(phoneInput)
+    })
+
+    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+        const fio = document.getElementById('fio').value.trim()
+        const phone = document.getElementById('phone').value.trim()
+        const pin = document.getElementById('pin').value.trim()
+        const captcha = document.getElementById('captcha').value.trim()
+
+        if (!fio || !phone  || phone.length < 11 || !pin || !captcha) {
+            alert('Пожалуйста, заполните все обязательные поля.')
+            event.preventDefault()
+            return false
+        }
+
+        const pinPattern = /^\d{5}$/
+        if (!pinPattern.test(pin)) {
+            alert('Пожалуйста, введите ПИН-код, состоящий из 5 цифр.')
+            event.preventDefault()
+            return false
+        }
+    })
+})
+
+function formatInputNumber(input) {
+    let phone = input.value.replace(/\D/g, '')
+    console.log(phone)
+    if (!phone) return ''
+
+    const countryCode = '+7'
+    let formattedPhone = ''
+
+    if (phone[0] === '9') {
+        phone = countryCode + phone
+    }
+    if (phone[0] === '7' || phone[0] === '8') {
+        formattedPhone = countryCode + ' '
+    }
+
+    if (phone.length > 1) {
+        formattedPhone += '(' + phone.substring(1, 4)
+    }
+    if (phone.length >= 5) {
+        formattedPhone += ') ' + phone.substring(4, 7)
+    }
+    if (phone.length >= 8) {
+        formattedPhone += '-' + phone.substring(7, 9)
+    }
+    if (phone.length >= 10) {
+        formattedPhone += '-' + phone.substring(9, 11)
+    }
+
+    input.value = formattedPhone
+}
+</script>
