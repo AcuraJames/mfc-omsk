@@ -21,6 +21,8 @@ html, body {
 	margin: 0 auto;
 	clear: both;
 	position: relative;
+	color: #663A2A;
+	font-family: Inter;
 }
 .logo {
 	width: 170px;
@@ -261,6 +263,7 @@ html, body {
 .footer-contaner {
 	width: 100%;
 	height: 280px;
+	margin-top: 150px;
 	display: block;
 	float: left;
 	clear: both;
@@ -448,11 +451,12 @@ html, body {
 
 h1 {
 	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 	font-family: "Inter", sans-serif;
-    color: #663A2A;
+  color: #663A2A;
 	font-size: 36px;
 	font-weight: 500;
+	line-height: 70.4px;
 	float: left;
 	width: 100%;
 }
@@ -575,6 +579,8 @@ h2 {
     display: block;
     float: left;
     width: 90%;
+		height: 60px;
+		overflow-y: hidden;
 }
 .news-details {
 	width: auto;
@@ -588,11 +594,15 @@ h2 {
 	text-align: center;
 	border-radius: 10px;
     margin-top: 30px;
+		margin-bottom: 0;
     padding: 0 40px;
     line-height: 35px;
     text-decoration: none;
 	border: 2px solid #b3b3b3;
 	transition: all 0.3s;
+	position: absolute;
+	right: 20px;
+	bottom: 30px;
 }
 .news-details:hover {
 	border: 2px solid transparent;
@@ -620,7 +630,7 @@ h2 {
 }
 #n-baner {
 	clear: both;
-	margin-bottom: 150px;
+	/* margin-bottom: 150px; */
 }
 #n-baner .splide__arrows {
 	position: absolute;
@@ -1668,5 +1678,127 @@ p a:hover, li a:hover {
 }
 
 .form-button:hover {
+	background-color: #e5533d;
+}
+
+/* LOGIN PAGE */
+.signin {
+  min-height: 685px;
+  margin-inline: auto;
+  margin-top: 130px;
+  text-align: center;
+  color: #663A2A;
+  font-family: Inter;
+}
+
+.signin-title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 70.4px;
+}
+
+.signin-description {
+  margin-bottom: 50px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30.4px;
+}
+
+.signin-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.signin-btn-esia {
+  height: 40px;
+  padding: 10px 38px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #C59368;
+  cursor: pointer;
+}
+
+/* 404 PAGE */
+.error-404 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: Inter;
+  color: #663A2A;
+}
+.error-404-text {
+  line-height: 36px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.error-404-text:first-child {
+  font-size: 36px;
+  font-weight: 500;
+}
+/* ADD NEWS */
+.news {
+	font-family: Inter;
+	color: #663A2A;
+}
+.news-text {
+	margin-bottom: 30px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20.8px;
+	text-align: left;
+}
+.news-image img {
+	max-width: 800px;
+}
+
+.news-list {
+	margin-bottom: 100px;
+}
+
+.news-list-cards {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.news-container {
+	width: calc(33.3% - 15px);
+	height: 590px;
+	margin-bottom: 30px;
+	padding: 20px;
+	display: block;
+	float: left;
+	background: #fff;
+	border: 1px solid #C59368;
+	border-radius: 6px;
+	position: relative;
+}
+
+.news-list-btn {
+	width: calc(33.3% - 15px);
+	height: 40px;
+	margin: 50px auto;
+	padding: 8px 38px;
+	display: block;
+	border-radius: 10px;
+	border: none;
+	font-size: 16px;
+	cursor: pointer;
+	color: #ffffff;
+	background-color: #ED5338;
+}
+
+.news-list-btn:hover {
 	background-color: #e5533d;
 }
