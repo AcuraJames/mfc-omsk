@@ -1763,7 +1763,6 @@ p a:hover, li a:hover {
 .news-list {
 	margin-bottom: 100px;
 }
-
 .news-list-cards {
 	width: 100%;
 	display: flex;
@@ -1771,7 +1770,6 @@ p a:hover, li a:hover {
 	justify-content: space-between;
 	align-items: center;
 }
-
 .news-container {
 	width: calc(33.3% - 15px);
 	height: 590px;
@@ -1784,7 +1782,6 @@ p a:hover, li a:hover {
 	border-radius: 6px;
 	position: relative;
 }
-
 .news-list-btn {
 	width: calc(33.3% - 15px);
 	height: 40px;
@@ -1798,7 +1795,38 @@ p a:hover, li a:hover {
 	color: #ffffff;
 	background-color: #ED5338;
 }
-
 .news-list-btn:hover {
 	background-color: #e5533d;
+}
+/* ADD GALLERY */
+.gallery {
+	width: 100%;
+	margin-left: -10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.gallery-image-wrap {
+	width: calc(33.3% - 20px);
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+.gallery-image-wrap img {
+	width: 100%;
+}
+
+@media only screen and (max-width: 960px) and (min-width: 768px) {
+	.gallery-image-wrap {
+		width: calc(50% - 20px);
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.gallery-image-wrap {
+		width: calc(50% - 10px);
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-bottom: 10px;
+	}
 }
