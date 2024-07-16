@@ -94,7 +94,10 @@
                 <span class="search-icon"></span>
             </div>
             <div class="header-right-bottom">
-                <a href="#" class="for-watch-better red_link">Версия для слабовидящих</a>
+                <div class="header-right-middle">
+                    <a href="#" class="for-watch-better red_link">Версия для слабовидящих</a>
+                    <a class="login-tablet" href="/user/">Войти</a>
+                </div>
                 <div class="header-right-bottom-text">
                     Оформите личный секретный код в клиентской службе Социального Фонда России или в любом офисе
                     многофункционального центра для получения расширенной консультации по телефону!
@@ -447,11 +450,11 @@
     </div>
 </div>
 
-<div class="page-width">
+<div class="page-width page-width--fullscreen">
 
     <h2>Последние новости</h2>
 
-    <section id="n-baner" class="splide desktop" aria-label="Splide Basic HTML Example">
+    <section id="n-baner" class="splide" aria-label="Splide Basic HTML Example">
         <div class="splide__track">
             <ul class="splide__list">
                 <li class="splide__slide">
@@ -661,7 +664,7 @@
             </ul>
         </div>
     </section>
-    <section id="n-baner-mob" class="splide mobile" aria-label="Splide Basic HTML Example">
+    <!-- <section id="n-baner-mob" class="splide mobile" aria-label="Splide Basic HTML Example">
         <div class="splide__track">
             <ul class="splide__list">
                 <li class="splide__slide">
@@ -802,7 +805,7 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> -->
 
 </div>
 
@@ -859,12 +862,12 @@
             </div>
         </div>
 
-        <div class="footer-tel-info">
+        <!-- <div class="footer-tel-info">
             Единый номер справочно-консультационной службы МФЦ
         </div>
         <div class="footer-tel">
             122. Звонок бесплатный.
-        </div>
+        </div> -->
 
         <div class="footer-bottom">
             <div class="copyright">© 2024, МФЦ Омской области</div>
@@ -891,11 +894,11 @@
         autoplay: 'play',
         perPage: 3,
     }).mount();
-    new Splide('#n-baner-mob', {
-        type: 'loop',
-        autoplay: 'play',
-        perPage: 1,
-    }).mount();
+    // new Splide('#n-baner-mob', {
+    //     type: 'loop',
+    //     autoplay: 'play',
+    //     perPage: 1,
+    // }).mount();
 </script>
 <script>
     $(document).ready(function () {

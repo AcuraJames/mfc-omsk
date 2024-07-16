@@ -14,7 +14,8 @@ html, body {
 	float: left;
     padding: 20px 0;
 }
-.page-width {
+.page-width, 
+.page-width--fullscreen {
 	width: 1222px;
 	max-width: 100%;
 	height: auto;
@@ -259,6 +260,9 @@ html, body {
 	background: url('../img/login-hover.svg');
     background-repeat: no-repeat;
 }
+.login-tablet {
+	display: none;
+}
 
 .footer-contaner {
 	width: 100%;
@@ -447,6 +451,10 @@ html, body {
 }
 #main-baner .splide__pagination li {
 	margin-right: 5px;
+}
+
+#main-baner img {
+	width: 100%;
 }
 
 h1 {
@@ -764,7 +772,7 @@ h2 {
 	}
 	.header-contaner {
 		overflow: hidden;
-        padding: 15 25px 0 25px!important;
+        padding: 15px 24px 0 24px!important;
         height: auto!important;
 		
 	}
@@ -777,10 +785,10 @@ h2 {
 	.main-map-handler {
 		overflow: hidden;
 		margin-top: 25px !important;
-        padding-top: 25px;
-        height: auto;
-        padding-bottom: 35px;
-        margin-bottom: 30px;
+		padding-top: 25px;
+		height: auto;
+		padding-bottom: 35px;
+		margin-bottom: 30px;
 	}
 	.main-map-handler .page-width {
 		padding: 0 25px;
@@ -792,10 +800,10 @@ h2 {
 		padding: 20px 0 30px 0!important;
 	}
 	.logo {
-		width: 40%!important;
-        background-size: contain;
+		width: 159px;
+        background-size: 159px;
         background-repeat: no-repeat;
-		background-position: 50% 30%;
+		/* background-position: 50% 30%; */
 	}
 	.header-slogan-top {
 		font-size: 10px!important;
@@ -1828,5 +1836,273 @@ p a:hover, li a:hover {
 		margin-left: 5px;
 		margin-right: 5px;
 		margin-bottom: 10px;
+	}
+}
+
+/* FIX ADOPTION */
+@media only screen and (max-width: 1440px) and (min-width: 1200px) {
+	.header-contaner {
+		padding-inline: 33px;
+	}
+	.header-slogan {
+		width: 415px;
+	}
+	.header-slogan-top,
+	.header-slogan-bottom {
+		margin-bottom: 10px;
+		line-height: 17.6px;
+	}
+	.header-right,
+	.header-right-top {
+		width: 340px;
+	}
+	.header-right-top input {
+		width: 340px;
+		height: 38px;
+	}
+	.for-watch-better {
+		font-size: 14px;
+	}
+	.menu-contaner {
+		padding: 0 38px;
+	}
+
+	.page-width {
+		width: 1134px;
+	}
+
+	.menu-footer-desktop li a {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 1024px) {
+	.header-contaner {
+		padding-inline: 34px;
+	}
+	.header-slogan {
+		width: 337px;
+	}
+	.header-slogan-top,
+	.header-slogan-bottom {
+		font-size: 12px;
+		line-height: 13px;
+	}
+	.header-right,
+	.header-right-top {
+		width: 267px;
+	}
+	.header-right-top input {
+		width: 267px;
+		height: 35px;
+	}
+	.header-right-bottom-text {
+		font-size: 10px;
+	}
+	.for-watch-better {
+		font-size: 14px;
+	}
+	.menu-contaner {
+		padding-inline: 38px;
+	}
+	.menu-contaner .menu-desktop a {
+		font-size: 14px;
+	}
+	.login {
+		font-size: 14px;
+	}
+
+	.page-width {
+		width: 856px;
+	}
+
+	.category-element {
+		font-size: 12px;
+		line-height: 16.8px;
+	}
+
+	.news-contaner {
+		height: 620px;
+		display: flex;
+		flex-direction: column;
+	}
+	.news-title {
+		font-size: 14px;
+	}
+	.news-prev-text {
+		height: 96px;
+		margin-bottom: 20px;
+		font-size: 12px;
+		line-height: 15px;
+	}
+	.news-date-prev, 
+	.news-details {
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		text-align: center;
+	}
+
+	.logo-footer {
+		width: 122px;
+		background-size: 122px;
+		background-repeat: no-repeat;
+	}
+
+	.menu-footer-desktop li a {
+		font-size: 10px;
+	}
+	.copyright {
+		font-size: 10px;
+	}
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+	.header-contaner {
+		padding-inline: 34px;
+	}
+	.logo {
+		width: 141px;
+		height: 108px;
+		background-size: 141px;
+		background-repeat: no-repeat;
+	}
+	.header-slogan {
+		width: 243px;
+	}
+	.header-slogan-top {
+		height: 68px;
+		margin-bottom: 12px;
+	}
+	.header-slogan-top,
+	.header-slogan-bottom {
+		font-size: 10px;
+		line-height: 13px;
+	}
+	.header-right {
+		width: 246px;
+	}
+	.header-right-top,
+	.header-right-top input {
+		width: 246px;
+		height: 35px;
+		font-size: 12px;
+	}
+	.header-right-middle {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: -5px;
+	}
+	.header-right-bottom {
+		margin-top: 10px;
+	}
+	.header-right-bottom-text {
+		margin-top: -7px;
+		font-size: 10px;
+		line-height: 13px;
+	}
+	.for-watch-better {
+		margin-left: 32px;
+		font-size: 10px;
+		margin-bottom: 0;
+	}
+	.for-watch-better::before {
+		top: 1px;
+	}
+	.menu-contaner {
+		padding-inline: 34px;
+		margin-inline: auto;
+	}
+	.menu-contaner .menu-desktop a {
+		font-size: 10px;
+	}
+	.login {
+		display: none;
+	}
+	.login-tablet {
+		width: auto;
+		display: block;
+		float: right;
+		font-size: 10px;
+		line-height: 47px;
+    font-family: "Inter", sans-serif;
+    color: #ED5338;
+		text-decoration: none;
+		transition: all 0.3s;
+    position: relative;    
+		padding-left: 20px;
+	}
+	.login-tablet::before {
+		content: '';
+		display: block;
+		width: 15px;
+		height: 15px;
+		background: url('../img/login-hover.svg');
+    position: absolute;
+    left: -5px;
+    top: 14px;
+    color: #ED5338;
+    fill: #ED5338;
+		transition: all 0.3s;
+    background-repeat: no-repeat;
+	}
+
+	.page-width {
+		width: 700px;
+	}
+	.page-width--fullscreen {
+		width: 100%;
+		/* padding-left: calc((100% - 700px) / 2); */
+		padding-left: 34px;
+		overflow-x: hidden;
+	}
+
+	.category-element {
+		font-size: 10px;
+	}
+	
+	#n-baner .splide__track {
+		width: 155%;
+	}
+
+	#n-baner .splide__arrows,
+	#n-baner .splide__pagination {
+		display: none;
+	}
+
+	.logo-footer {
+		width: 122px !important;
+		height: 100px !important;
+		background-size: contain !important;
+		background-repeat: no-repeat !important;
+		background-position: 50% 30% !important;
+		margin: 0 auto 20px auto !important;
+		float: none !important;
+	}
+
+	.menu-footer-desktop li a {
+		font-size: 10px;
+	}
+	.copyright {
+		font-size: 10px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.page-width--fullscreen {
+		width: 100%;
+		padding-left: 24px;
+		overflow-x: hidden;
+	}
+
+	#n-baner .splide__track {
+		width: 260%;
+	}
+
+	.copyright {
+		font-size: 10px;
 	}
 }
