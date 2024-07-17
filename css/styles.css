@@ -191,21 +191,23 @@ html, body {
 .menu-mobile {
 	width: auto;
 	float: left;
-	height: 50px;
-    margin: 0;
-    padding: 0;
-    margin-left: 25px;
-    margin-top: 35px;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	margin-left: 25px;
+	margin-top: 35px;
+	overflow-y: auto;
 }
 .menu-mobile li {
+	width: calc(100% - 10px);
 	float: left;
 	clear: both;
 	list-style-type: none;
 	list-style-image: none;
 	margin-right: 10px;
 }
-.menu-mobile li a {
-    width: auto;
+.menu-mobile > li > a {
+    width: fit-content;
     font-family: "Inter", sans-serif;
     padding: 0;
     height: 50px;
@@ -224,6 +226,47 @@ html, body {
 	color: #ED5338;
     text-decoration: none;
 }
+
+/* ADD MOBILE SUBMENU */
+.submenu-mobile {
+	display: none;
+	margin-top: -15px;
+	margin-left: 15px;
+	position: relative;
+}
+.submenu-mobile > a {
+	display: block;
+	font-size: 10px;
+	line-height: 15px;
+	color: #663A2A;
+}
+.submenu-item {
+	position: relative;
+}
+.submenu-toggle {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+}
+.submenu-chevron:after {
+	content: '';
+	display: inline-flex;
+	width: 7px;
+	height: 7px;
+	z-index: 3;
+	transform-origin: center;
+	transform: rotate(45deg);
+	transition: all 0.3s ease-in;
+	border-right: 2px solid #663A2A;
+	border-bottom: 2px solid #663A2A;
+}
+.submenu-item--active .submenu-mobile {
+	display: block;
+}
+.submenu-item--active .submenu-chevron:after {
+	transform: rotate(225deg);
+}
+
 .login {
 	width: auto;
 	height: 50px;
@@ -958,7 +1001,11 @@ h2 {
 	width: 75%;
 	min-width: 322px;
 	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	background: #fff;
+	/* overflow-y: auto; */
 	position: fixed;
 	z-index: 999;
 	left: -140%;
@@ -972,6 +1019,24 @@ h2 {
 	left: 0;
 	top: 0;
 }
+.mobile-menu-bottom {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 50px;
+}
+.mobile-menu-bottom > .login {
+	position: relative !important;
+	bottom: unset !important;
+	left: unset !important;
+	margin-left: 33px;
+	margin-bottom: 10px;
+}
+.mobile-menu-bottom > .for-watch-better {
+	position: relative !important;
+	bottom: unset !important;
+	left: unset !important;
+	margin-left: 55px;
+}
 .menu-contaner.fixed {
 	position: fixed;
 	top: 0;
@@ -980,6 +1045,7 @@ h2 {
 }
 .mobile-menu-body .logo {
 	width: 159px!important;
+	height: 120px!important;
 	margin: 25px 0 0 25px !important;
 }
 
