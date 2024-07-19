@@ -1673,7 +1673,7 @@ p a:hover, li a:hover {
 
 /* ADD FORM */
 .form-container {
-	width: 400px;
+	width: auto;
 	font-family: Inter;
 }
 
@@ -1714,6 +1714,10 @@ p a:hover, li a:hover {
 
 .select-wrapper {
 	position: relative;
+}
+
+.form-field label {
+	display: block;
 }
 
 .select-arrow:after {
