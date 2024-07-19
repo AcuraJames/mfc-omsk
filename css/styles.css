@@ -1694,7 +1694,6 @@ p a:hover, li a:hover {
 .form-container input[type="time"],
 .form-container select {
 	width: 100%;
-	max-width: 400px;
 	margin-top: 10px;
 	margin-bottom: 24px;
 	padding: 11px 24px;
