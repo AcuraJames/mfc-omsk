@@ -1692,6 +1692,7 @@ p a:hover, li a:hover {
 .form-container input[type="password"],
 .form-container input[type="date"],
 .form-container input[type="time"],
+.form-container textarea,
 .form-container select {
 	width: 100%;
 	margin-top: 10px;
@@ -1741,7 +1742,9 @@ p a:hover, li a:hover {
 }
 
 .captcha-container img {
+	margin-top: 10px;
 	margin-right: 10px;
+	margin-bottom: 24px;
 }
 
 .form-button {
