@@ -122,8 +122,11 @@
 
         <div class="header-right">
             <div class="header-right-top">
-                <input type="text" placeholder="Что вы ищите?" class="search-input">
-                <span class="search-icon"></span>
+                <form action="/search/index.php">
+                    <input type="text" name="q" value="" size="15" maxlength="50">
+                    <span class="search-icon"></span>
+                    <input class="search-icon" name="s" type="submit" value="">
+                </form>
             </div>
             <div class="header-right-bottom">
                 <div class="header-right-middle">
@@ -203,8 +206,13 @@
         </a>
 
 
-        <input type="text" placeholder="Что вы ищите?" class="search-input-mobile">
-        <span class="search-icon-mobile"></span>
+        <div class="header-right-top">
+            <form action="/search/index.php">
+                <input type="text" name="q" value="" size="15" maxlength="50">
+                <span class="search-icon"></span>
+                <input class="search-icon" name="s" type="submit" value="">
+            </form>
+        </div>
     </div>
 </div>
 
