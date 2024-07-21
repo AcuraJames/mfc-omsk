@@ -84,11 +84,12 @@ html, body {
 	display: block;
 	float: right;
 }
-.header-right-top {
+.header-right-top--mobile {
     width: 100%;
     height: 40px;
     margin-bottom: 10px;
 	position: relative;
+	z-index: -1;
 }
 .for-watch-better {
     font-family: "Inter", sans-serif;
@@ -122,6 +123,7 @@ html, body {
 .search-input {
 	width: 380px;
 	height: 40px;
+	margin-bottom: 10px;
 	float: right;
 	border: 1px solid #DEDEDE;
 	border-radius: 6px;
@@ -144,8 +146,8 @@ html, body {
     height: 16px;
     background: url(../img/search-icon.svg);
     position: absolute;
-    right: 11px;
-    top: 11px;
+    right: 10px;
+    top: 8px;
     background-repeat: no-repeat;
 }
 .search-submit,
@@ -462,7 +464,10 @@ html, body {
 }
 #main-baner .splide__track {
 	width: 100%;
-	height: 630px;
+	/* height: 630px; */
+}
+#main-baner .splide__list {
+	height: auto!important;
 }
 #main-baner {
 	clear: both;
@@ -696,7 +701,7 @@ h2 {
 
 #n-baner .splide__track {
 	width: 100%;
-	height: 620px;
+	/* height: 620px; */
 }
 #n-baner {
 	clear: both;
@@ -753,7 +758,7 @@ h2 {
 }
 #n-baner .splide__track {
 	width: 100%;
-	height: 620px;
+	/* height: 620px; */
 }
 #n-baner-mob {
 	clear: both;
@@ -806,12 +811,19 @@ h2 {
 }
 #n-baner-mob .splide__slide {
 }
+@media only screen and (max-width: 1199px)  {
+	#main-baner .splide__track {
+		/* height: 450px!important; */
+	}
+}
+@media only screen and (max-width: 1023px)  {
+	#main-baner .splide__track {
+		/* height: 374px!important; */
+	}
+}
 @media only screen and (max-width: 768px)  {
 	#main-baner {
 		padding: 25px;
-	}
-	#main-baner .splide__track {
-		height: 200px!important;
 	}
 	#main-baner .splide__slide img {
 		max-width: 100%!important;
@@ -950,7 +962,7 @@ h2 {
 		margin-bottom: 0!important;
 	}
 	#n-baner-mob .splide__track  {
-		height: 600px!important;
+		/* height: 600px!important; */
 	}
 	#n-baner-mob .splide__pagination {
 		left: 25px!important;
@@ -1065,6 +1077,7 @@ h2 {
 .mobile-menu-body .logo {
 	width: 159px!important;
 	height: 120px!important;
+	background-size: 159px;
 	margin: 25px 0 0 25px !important;
 }
 
@@ -1083,6 +1096,7 @@ h2 {
     left: 25px;
     top: 16px;
 	opacity: 1;
+	z-index: 99;
 	transition: all 0.3s; 
 }
 .mobile-menu-opener:hover {
@@ -1949,7 +1963,7 @@ p a:hover, li a:hover {
 	.header-right-top {
 		width: 340px;
 	}
-	.header-right-top input {
+	.header-right-top input[type="text"] {
 		width: 340px;
 		height: 38px;
 	}
@@ -1999,10 +2013,10 @@ p a:hover, li a:hover {
 		padding-inline: 38px;
 	}
 	.menu-contaner .menu-desktop a {
-		font-size: 14px;
+		font-size: 12px;
 	}
 	.login {
-		font-size: 14px;
+		font-size: 12px;
 	}
 
 	.page-width {
@@ -2078,12 +2092,13 @@ p a:hover, li a:hover {
 		width: 246px;
 	}
 	.header-right-top,
-	.header-right-top input {
+	.header-right-top input[type="text"] {
 		width: 246px;
 		height: 35px;
 		font-size: 12px;
 	}
 	.header-right-middle {
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -2210,6 +2225,14 @@ p a:hover, li a:hover {
 		line-height: 10px;
 	}
 
+	.search-input {
+		margin-bottom: 0;
+	}
+
+	.header-right-top--mobile {
+		z-index: 1;
+	}
+
 	.search-input-mobile::placeholder {
 		font-size: 14px;
 	}
@@ -2240,5 +2263,9 @@ p a:hover, li a:hover {
 	.header-slogan-bottom {
 		font-size: 8px !important;
 		line-height: 10px !important;
+	}
+
+	#main-baner .splide__track {
+		/* height: 230px !important; */
 	}
 }
