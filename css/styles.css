@@ -638,6 +638,7 @@ h2 {
     color: #663A2A;
     font-size: 18px;
     font-weight: 500;
+		line-height: 20px;
     clear: both;
     margin-top: 20px;
     display: block;
@@ -654,8 +655,13 @@ h2 {
     display: block;
     float: left;
     width: 90%;
-		height: 60px;
 		overflow-y: hidden;
+		overflow: hidden !important;
+		text-overflow: ellipsis !important;
+		display: -webkit-box !important;
+		-webkit-line-clamp: 4 !important;
+		line-clamp: 4 !important;
+		-webkit-box-orient: vertical !important;
 }
 .news-details {
 	width: auto;
@@ -2028,8 +2034,9 @@ p a:hover, li a:hover {
 		line-height: 16.8px;
 	}
 
-	.news-contaner {
-		height: 620px;
+	.news-contaner,
+	.news-container {
+		height: 550px;
 		display: flex;
 		flex-direction: column;
 	}
@@ -2037,7 +2044,7 @@ p a:hover, li a:hover {
 		font-size: 14px;
 	}
 	.news-prev-text {
-		height: 96px;
+		width: 100%;
 		margin-bottom: 20px;
 		font-size: 12px;
 		line-height: 15px;
@@ -2050,6 +2057,9 @@ p a:hover, li a:hover {
 		right: 0;
 		bottom: 0;
 		text-align: center;
+	}
+	.news-image	{
+		height: 212px;
 	}
 
 	.logo-footer {
@@ -2205,6 +2215,10 @@ p a:hover, li a:hover {
 	.services-handler {
 		columns: 1;
 	}
+
+	.news-container {
+		width: calc(50% - 15px);
+	}
 }
 
 @media only screen and (max-width: 767px) {
@@ -2248,9 +2262,17 @@ p a:hover, li a:hover {
 	.statistika-link {
 		width: 100%;
 	}
+
+	.news-list-cards {
+		justify-content: center;
+	}
+	.news-container {
+		width: 100%;
+		max-width: 480px;
+	}
 }
 
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
 	.logo {
 		width: 100px;
 		background-size: 100px;
@@ -2267,5 +2289,33 @@ p a:hover, li a:hover {
 
 	#main-baner .splide__track {
 		/* height: 230px !important; */
+	}
+
+	.news-container {
+		height: 550px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.news-contaner {
+		height: 550px;
+		display: flex;
+		flex-direction: column;
+	}
+	.news-title {
+		font-size: 14px;
+	}
+	.news-prev-text {
+		-webkit-line-clamp: 3 !important;
+    line-clamp: 3 !important;
+	}
+	.news-date-prev {
+		width: 100%;
+		margin: 20px 0;
+		text-align: center;
+		position: unset;
+	}
+	.news-details {
+		position: unset;
 	}
 }
