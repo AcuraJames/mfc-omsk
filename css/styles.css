@@ -1489,7 +1489,6 @@ td p {
     margin-bottom: 50px;
 }
 
-
 .struktura-upolnomoch-contact {
     width: 100%;
     height: auto;
@@ -1500,6 +1499,13 @@ td p {
     border-radius: 6px;
     float: left;
     margin-right: 3%;
+}
+.mfc-structure-workers {
+	min-height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 .struktura-upolnomoch-contact-head {
 	width: 100%;
@@ -2219,6 +2225,13 @@ p a:hover, li a:hover {
 	.news-container {
 		width: calc(50% - 15px);
 	}
+
+	.struktura-upolnomoch-contact-head {
+		min-height: 70px;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+	}
 }
 
 @media only screen and (max-width: 767px) {
@@ -2270,6 +2283,10 @@ p a:hover, li a:hover {
 		width: 100%;
 		max-width: 480px;
 	}
+
+	.services-handler {
+		columns: 1;
+	}
 }
 
 @media only screen and (max-width: 480px) {
@@ -2317,5 +2334,8 @@ p a:hover, li a:hover {
 	}
 	.news-details {
 		position: unset;
+	}
+	.mfc-structure-workers {
+		min-height: unset;
 	}
 }
