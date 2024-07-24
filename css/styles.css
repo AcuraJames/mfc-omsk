@@ -1198,7 +1198,7 @@ display: block!important;
 .breadcrumb-holder a {
 	font-family: "Inter", sans-serif;
     color: #663A2A;
-	font-size: 16px;
+	font-size: 12px;
 	font-weight: 400;
 	height: 50px;
 	line-height: 47px;
@@ -1943,6 +1943,11 @@ p a:hover, li a:hover {
 	width: 100%;
 }
 
+.life-service-item {
+	display: flex;
+	align-items: center;
+}
+
 @media only screen and (max-width: 960px) and (min-width: 768px) {
 	.gallery-image-wrap {
 		width: calc(50% - 20px);
@@ -2066,6 +2071,13 @@ p a:hover, li a:hover {
 	}
 	.news-image	{
 		height: 212px;
+	}
+
+	.struktura-link {
+		font-size: 14px;
+	}
+	.maphilighted {
+		width: 200px !important;
 	}
 
 	.logo-footer {
@@ -2197,6 +2209,13 @@ p a:hover, li a:hover {
 		display: none;
 	}
 
+	.struktura-menu {
+		width: 100%;
+	}
+	.maphilighted {
+		display: none !important;
+	}
+
 	.logo-footer {
 		width: 122px !important;
 		height: 100px !important;
@@ -2235,6 +2254,9 @@ p a:hover, li a:hover {
 }
 
 @media only screen and (max-width: 767px) {
+	.breadcrumb-holder a {
+		font-size: 14px;
+	}
 	.page-width--fullscreen {
 		width: 100%;
 		padding-left: 24px;
@@ -2287,9 +2309,20 @@ p a:hover, li a:hover {
 	.services-handler {
 		columns: 1;
 	}
+
+	.struktura-menu {
+		width: 100%;
+		columns: 1;
+	}
+	.maphilighted {
+		display: none !important;
+	}
 }
 
 @media only screen and (max-width: 480px) {
+	.breadcrumb-holder a {
+		font-size: 14px;
+	}
 	.logo {
 		width: 100px;
 		background-size: 100px;
