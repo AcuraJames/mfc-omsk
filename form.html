@@ -9,7 +9,7 @@
     <form action="#" method="post" id="appointmentForm">
         <div class="form-field">
             <label for="fio">ФИО</label>
-            <input type="text" id="fio" name="fio">
+            <input type="text" id="fio" name="fio" >
         </div>
 
         <div class="form-field">
@@ -26,7 +26,7 @@
             <label for="captcha">Введите текст с картинки</label>
             <div class="captcha-container">
                 <img src="captcha.jpg" alt="Captcha">
-                <input type="text" id="captcha" name="captcha">
+                <input type="text" id="captcha" name="captcha" >
             </div>
         </div>
 
@@ -80,68 +80,8 @@
             </div>
         </div>
         
-
-        <button type="submit" class="form-button">Записаться за прием</button>
+        <button type="submit" class="form-button">Записаться на прием</button>
     </form>
 </div>
 
-<script>
- document.addEventListener('DOMContentLoaded', function() {
-    var phoneInput = document.getElementById('phone')
-
-    phoneInput.addEventListener('input', function() {
-        formatInputNumber(phoneInput)
-    })
-
-    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
-        const fio = document.getElementById('fio').value.trim()
-        const phone = document.getElementById('phone').value.trim()
-        const pin = document.getElementById('pin').value.trim()
-        const captcha = document.getElementById('captcha').value.trim()
-
-        if (!fio || !phone  || phone.length < 11 || !pin || !captcha) {
-            alert('Пожалуйста, заполните все обязательные поля.')
-            event.preventDefault()
-            return false
-        }
-
-        const pinPattern = /^\d{5}$/
-        if (!pinPattern.test(pin)) {
-            alert('Пожалуйста, введите ПИН-код, состоящий из 5 цифр.')
-            event.preventDefault()
-            return false
-        }
-    })
-})
-
-function formatInputNumber(input) {
-    let phone = input.value.replace(/\D/g, '')
-    console.log(phone)
-    if (!phone) return ''
-
-    const countryCode = '+7'
-    let formattedPhone = ''
-
-    if (phone[0] === '9') {
-        phone = countryCode + phone
-    }
-    if (phone[0] === '7' || phone[0] === '8') {
-        formattedPhone = countryCode + ' '
-    }
-
-    if (phone.length > 1) {
-        formattedPhone += '(' + phone.substring(1, 4)
-    }
-    if (phone.length >= 5) {
-        formattedPhone += ') ' + phone.substring(4, 7)
-    }
-    if (phone.length >= 8) {
-        formattedPhone += '-' + phone.substring(7, 9)
-    }
-    if (phone.length >= 10) {
-        formattedPhone += '-' + phone.substring(9, 11)
-    }
-
-    input.value = formattedPhone
-}
-</script>
+<script src="./js/validation.js"></script>

@@ -1755,16 +1755,32 @@ p a:hover, li a:hover {
 	box-sizing: border-box;
 }
 
-
 .form-container select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
+}
+
+.form-container input.invalid,
+.form-container select.invalid,
+.form-container textarea.invalid {
+	border-color: red;
+}
+
+.error-message {
+	color: red;
+	font-size: 12px;
+	position: absolute;
+	right: 0;
+	bottom: 8px;
 }
 
 .select-wrapper {
 	position: relative;
 }
 
+.form-field {
+	position: relative;
+}
 .form-field label {
 	display: block;
 }
