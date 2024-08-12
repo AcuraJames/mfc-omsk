@@ -1900,7 +1900,7 @@ p a:hover, li a:hover {
 	text-decoration: none;
 }
 .appointment-form-container {
-	max-width: 400px;
+	max-width: 100%;
 	margin-top: 50px;
 }
 .appointment-files {
@@ -2097,7 +2097,7 @@ p a:hover, li a:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-dialog {
+.modal-inner {
 	max-width: 400px;
 	padding: 20px;
 	border-radius: 8px;
@@ -2106,7 +2106,7 @@ p a:hover, li a:hover {
 }
 .modal-confirm {
 	margin-top: 30px;
-	text-align: right;
+	text-align: center;
 }
 
 .loading-rotate {
