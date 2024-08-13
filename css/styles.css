@@ -1952,6 +1952,9 @@ p a:hover, li a:hover {
 	border: 1px solid #C59368;
 	border-radius: 8px;
 }
+.feedback-history-block-completed {
+	text-decoration: line-through;
+}
 .feedback-history-title,
 .appeal-title {
 	padding: 4px 24px;
