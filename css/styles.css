@@ -1765,7 +1765,28 @@ p a:hover, li a:hover {
 .form-container textarea.invalid {
 	border-color: red;
 }
-
+.form-attached-file {
+	display: flex;
+	align-items: center;
+	margin-top: -10px;
+	margin-bottom: 20px;
+}
+.form-attached-file::after {
+	content: '✕';
+	margin-top: 4px;
+	margin-left: 8px;
+	cursor: pointer;
+	font-size: 10px;
+	font-weight: 600;
+	color: red;
+}
+.form-attached-file-icon {
+	width: 20px;
+	height: 20px;
+	background: url(../img/doc.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
 .error-message {
 	color: red;
 	font-size: 11px;
@@ -1984,6 +2005,23 @@ p a:hover, li a:hover {
 .appeal-meta {
 	min-width: 125px;
 	font-size: 12px;
+}
+.appeal-attachment-title {
+	font-size: 12px;
+}
+.appeal-attachment-item {
+	padding: 4px;
+	border-radius: 4px;
+	font-size: 12px;
+	/* background-color: rgba(197,147,104, 0.3); */
+	color: #C59368;
+	cursor: pointer;
+}
+.appeal-attachment-item:hover {
+	color: #e5533d;
+}
+.appeal-attachment-item:not(:last-child):after {
+	content: ',';
 }
 
 /* 404 PAGE */
