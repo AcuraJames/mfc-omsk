@@ -1846,6 +1846,9 @@ p a:hover, li a:hover {
 	border-radius: 10px;
 	font-size: 16px;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .form-button--submit {
 	max-width: 218px;
