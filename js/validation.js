@@ -70,8 +70,10 @@ document.addEventListener('DOMContentLoaded', function() {
         removeErrorMessages(input)
 
         if (input.value.trim() === '') {
+          if (input.id !== 'file') {
             addErrorMessage(input, 'Это поле обязательно для заполнения.')
             isValid = false
+          }
         } else if (input.id === 'phone' && input.value.length !== 18) {
             addErrorMessage(input, 'Пожалуйста, введите номер телефона в формате +7 (XXX) XXX-XX-XX.')
             isValid = false

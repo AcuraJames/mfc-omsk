@@ -1868,7 +1868,15 @@ p a:hover, li a:hover {
 .form-button:hover {
 	background-color: #e5533d;
 }
-
+.form-button > label {
+	cursor: pointer;
+	font-weight: 400;
+	color: #ffffff;
+}
+.form-button > input[type="file"] {
+	width: 0;
+	opacity: 0;
+}
 /* LOGIN PAGE */
 .signin {
   min-height: 685px;
@@ -1978,6 +1986,10 @@ p a:hover, li a:hover {
 .feedback-form {
 	margin-top: 100px;
 }
+.feedback-link {
+	text-decoration: none;
+	color: #663A2A;
+}
 .feedback-history-block,
 .appeal-block {
 	width: 100%;
@@ -2037,6 +2049,10 @@ p a:hover, li a:hover {
 }
 .appeal-attachment-item:not(:last-child):after {
 	content: ',';
+}
+.appeal-attachment-item > a {
+	text-decoration: none;
+	color: #ED5338;
 }
 
 /* 404 PAGE */
