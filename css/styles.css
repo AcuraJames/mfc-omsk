@@ -130,6 +130,10 @@ html, body {
 	padding: 7px 30px 7px 20px;
 	position: relative;
 }
+.search-input--fullwidth {
+	width: 100%;
+	float: none;
+}
 .search-input::placeholder {
 	color: #C9C9C9;
 	opacity: 1; /* Firefox */
@@ -830,13 +834,17 @@ h2 {
 @media only screen and (max-width: 768px)  {
 	#main-baner {
 		padding: 25px;
+		padding-bottom: 0 !important;
 	}
 	#main-baner .splide__slide img {
 		max-width: 100%!important;
 	}
 	#main-baner .splide__pagination {
-		/* bottom: 0!important; */
-		left: 25px!important;
+		padding-inline: 25px;
+	}
+	#main-baner .splide__pagination__page {
+		width: 4px !important;
+		height: 4px !important;
 	}
 	#main-baner .splide__arrows  {
 		/* right: 25px!important;
@@ -1226,13 +1234,11 @@ display: block!important;
     color: #663A2A;
 	font-size: 16px;
 	font-weight: 400;
-	height: 10px;
 	line-height: 20px;
 	text-decoration: none;
     position: relative;
     padding-left: 15px;
     display: block;
-    margin-bottom: 50px;
     clear: both;
     float: left;
 }
@@ -1684,6 +1690,7 @@ p a:hover, li a:hover {
 	overflow: hidden;
 	transition: all 0.3s ease-out;
 	max-height: 0;
+	padding: 0 !important;
 }
 
 .accordion-body p {
@@ -2140,6 +2147,10 @@ p a:hover, li a:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.faq-search {
+	position: relative;
+}
+
 .modal-inner {
 	max-width: 400px;
 	padding: 20px;
@@ -2544,6 +2555,9 @@ p a:hover, li a:hover {
 		font-size: 14px;
 	}
 
+	#n-baner {
+		margin-left: 10px;
+	}
 	#n-baner .splide__track {
 		width: 260%;
 	}
@@ -2554,6 +2568,9 @@ p a:hover, li a:hover {
 
 	.statistika-link {
 		width: 100%;
+	}
+	.struktura-link {
+		font-size: 16px;
 	}
 
 	.news-list-cards {
@@ -2571,6 +2588,11 @@ p a:hover, li a:hover {
 	.struktura-menu {
 		width: 100%;
 		columns: 1;
+	}
+	.struktura-detail,
+	.struktura-contacts,
+	.struktura-contact {
+		width: 100%;
 	}
 	.maphilighted {
 		display: none !important;
@@ -2662,11 +2684,11 @@ p a:hover, li a:hover {
 	.profile-button-group button {
 		margin-right: 4px;
 	}
-
-	.page-link {
-		font-size: 12px;
-	}
 	.services-handler {
 		margin-top: 20px;
-	} 
+	}
+	.service-controler {
+		padding-left: 20px;
+		background: none;
+	}
 }
