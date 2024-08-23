@@ -134,6 +134,9 @@ html, body {
 	width: 100%;
 	float: none;
 }
+.search-input--fullwidth ~ .search-icon {
+	top: 11px;
+}
 .search-input::placeholder {
 	color: #C9C9C9;
 	opacity: 1; /* Firefox */
@@ -161,6 +164,9 @@ html, body {
 	top: 0;
 	right: 0;
 	opacity: 0;
+}
+.search-icon {
+	
 }
 .search-form-mobile {
 	width: 100%;
@@ -2168,6 +2174,10 @@ p a:hover, li a:hover {
 
 .faq-search {
 	position: relative;
+}
+.faq-search-label {
+	margin-bottom: 15px;
+	font-weight: 700;
 }
 
 .modal-inner {
