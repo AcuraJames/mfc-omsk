@@ -6,7 +6,6 @@ html, body {
 	-khtml-user-select: none;
 	-webkit-user-select: none;*/
 }
-
 .header-contaner {
 	width: 100%;
 	height: 170px;
@@ -1344,8 +1343,8 @@ td p {
 	height: 40px;
 	font-family: "Inter", sans-serif;
     color: #fff;
-    font-size: 18px;
-    font-weight: 400;
+	font-size: 16px;
+	font-weight: 500;
     line-height: 38px;
     background: #C59368;
     border-radius: 6px;
@@ -1354,6 +1353,7 @@ td p {
     text-align: center;
     text-decoration: none;
 	transition: all 0.3s;
+	white-space: nowrap;
 }
 .struktura-menu.active {
 	display: block!important;
@@ -2720,4 +2720,12 @@ p a:hover, li a:hover {
 		padding-left: 20px;
 		background: none;
 	}
+}
+
+.select_hidden, .fields-hidden, .button-hidden, .modal-hidden, .loading-hidden, .appointment-finish-hidden {
+    display: none !important;
+}
+.form-button {
+    display: flex;
+    align-items: center;
 }
