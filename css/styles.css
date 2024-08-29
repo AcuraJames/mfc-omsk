@@ -27,7 +27,7 @@ html, body {
 }
 .logo {
 	width: 170px;
-	height: 130px;
+	height: 132px;
 	display: block;
 	float: left;
 	background: url('../img/logo.svg');
@@ -2388,7 +2388,7 @@ p a:hover, li a:hover {
 	}
 	.logo {
 		width: 141px;
-		height: 108px;
+		height:110px;
 		background-size: 141px;
 		background-repeat: no-repeat;
 	}
