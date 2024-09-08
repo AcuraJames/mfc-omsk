@@ -1603,6 +1603,14 @@ td p {
 	border-top: 1px solid #663A2A;
     padding-top: 20px;
 }
+.direction-list {
+	list-style-type: none;
+	line-height: 36.96px;
+	padding: 0;
+}
+.directions-list > li > a {
+	color: #ED5338;
+}
 .bigtime {
 	color: #ED5338;
     font-size: 36px;
