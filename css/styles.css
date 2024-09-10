@@ -353,6 +353,7 @@ html, body {
 	display: block;
 	float: left;
 	background: url('../img/logo-footer.svg');
+	background-repeat: no-repeat;
 }
 .menu-footer-desktop {
 	width: auto;
@@ -2503,6 +2504,15 @@ p a:hover, li a:hover {
 	#n-baner .splide__arrows,
 	#n-baner .splide__pagination {
 		display: none;
+	}
+
+	.warning-banner {
+		text-align: center;
+	}
+	.warning-banner > img {
+		width: 90%;
+    max-width: 644px;
+    margin-left: -24px;
 	}
 
 	.struktura-menu {
