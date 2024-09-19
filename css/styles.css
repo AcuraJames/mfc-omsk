@@ -1876,6 +1876,7 @@ p a:hover, li a:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	text-decoration: none;
 }
 .form-button--submit {
 	max-width: 218px;
