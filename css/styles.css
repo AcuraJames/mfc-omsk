@@ -2823,7 +2823,6 @@ p a:hover, li a:hover {
     width: 90px;
     height: 45px;
     background-color: #E9CEB4;
-    cursor: pointer;
 }
 .office_day_available.date-active {
     background-color: #FF5937;
