@@ -537,6 +537,7 @@ table, th, td {
 
 #main-baner img {
 	width: 100%;
+	object-fit: contain;
 }
 
 h1 {
