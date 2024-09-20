@@ -2753,3 +2753,170 @@ p a:hover, li a:hover {
     display: flex;
     align-items: center;
 }
+
+
+/* СТИЛИ, ВЫТАЩЕННЫЕ С БЭКА */
+.select_hidden, .fields-hidden, .button-hidden, .modal-hidden, .loading-hidden, .appointment-finish-hidden {
+    display: none !important;
+}
+.form-button {
+    display: flex;
+    align-items: center;
+}
+.sheluder_table {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+.officces_column {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: fit-content;
+    flex-shrink: 0;
+}
+.empty-row {
+    width: 300px;
+    height: 45px;
+}
+.office_date_label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 90px;
+}
+.office_name_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 300px;
+    font-size: 16px;
+    color: #FFF;
+    background-color: #B87D49;
+}
+.dates_column {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.office_days_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 3px;
+    overflow: hidden;
+}
+.office_day_available {
+    width: 90px;
+    height: 45px;
+    background-color: #651C02;
+    cursor: pointer;
+}
+.office_day_unavailable {
+    width: 90px;
+    height: 45px;
+    background-color: #E9CEB4;
+    cursor: pointer;
+}
+.office_day_available.date-active {
+    background-color: #FF5937;
+}
+.office_time_row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.office_timer_select {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    color: #FFF;
+    font-size: 18px;
+    background-color: #C59368;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.office_timer_select.time-active {
+    background-color: #ED5338;
+}
+.office_timer_hidden {
+    display: none;
+}
+.times_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 30px 0;
+}
+.filials-name {
+    width: 100%;
+    height: 40px;
+    background-color: #FFA500;
+    color: #FFF;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.filials-name:hover, .filials-name:focus, .filials-name:active, .filials-name.active-filial {
+    background-color: #ED5338;
+}
+.info-table {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.info-table-data {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.info-table-row {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: center;
+}
+.info-table-head {
+    color: #663A2A;
+    font-size: 16px;
+    font-weight: 700;
+}
+.info-table-row-cube {
+    width: 100px;
+    height: 45px;
+    border-radius: 5px;
+}
+.row-cube-orange {
+    background-color: #FF5937;
+}
+.row-cube-brown {
+    background-color: #651C02;
+}
+.row-cube-yellow {
+    background-color: #FFA500;
+}
+.row-cube-white {
+    background-color: #E9CEB4;
+}
+.info-table-row-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #663A2A;
+}
