@@ -2207,6 +2207,9 @@ p a:hover, li a:hover {
 	margin-top: 30px;
 	text-align: center;
 }
+.modal-content {
+	text-align: center;
+}
 
 .loading-rotate {
   animation-name: rotate;
@@ -2796,6 +2799,7 @@ p a:hover, li a:hover {
     align-items: center;
     height: 45px;
     width: 300px;
+    min-width: 300px;
     font-size: 16px;
     color: #FFF;
     background-color: #B87D49;
@@ -2819,6 +2823,11 @@ p a:hover, li a:hover {
     height: 45px;
     background-color: #651C02;
     cursor: pointer;
+}
+.office_day_sunday {
+    width: 90px;
+    height: 45px;
+    background-color: #FFA500;
 }
 .office_day_unavailable {
     width: 90px;
@@ -2902,6 +2911,7 @@ p a:hover, li a:hover {
     width: 100px;
     height: 45px;
     border-radius: 5px;
+    flex-shrink: 0;
 }
 .row-cube-orange {
     background-color: #FF5937;
@@ -2919,4 +2929,15 @@ p a:hover, li a:hover {
     font-size: 16px;
     font-weight: 400;
     color: #663A2A;
+}
+@media only screen and (max-width: 768px)  {
+	.time-picker {
+		overflow: scroll;
+	}
+	.dates_column, .office_days_row {
+		overflow: visible;
+	}
+	.office_day_unavailable, .office_day_available, .office_day_sunday {
+	    flex-shrink: 0;
+	}
 }
